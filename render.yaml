@@ -3,7 +3,10 @@ services:
     name: health-insurance-prediction
     env: python
     pythonVersion: 3.11.8
+    buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
     envVars:
       - key: FLASK_ENV
         value: production
+      - key: PORT
+        value: 10000
