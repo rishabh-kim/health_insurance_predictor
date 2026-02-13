@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: health-insurance-prediction
+    env: python
+    pythonVersion: 3.11
+    startCommand: "streamlit run app.py"
+    envVars:
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: true
+      - key: STREAMLIT_SERVER_ENABLEXSRFSUPPORT
+        value: false
