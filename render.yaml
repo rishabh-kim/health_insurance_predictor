@@ -2,8 +2,8 @@ services:
   - type: web
     name: health-insurance-prediction
     env: python
-    pythonVersion: 3.11
-    startCommand: "streamlit run app.py"
+    pythonVersion: 3.11.8
+    startCommand: "streamlit run app.py --server.port=10000 --server.address=0.0.0.0"
     envVars:
       - key: STREAMLIT_SERVER_HEADLESS
         value: true
